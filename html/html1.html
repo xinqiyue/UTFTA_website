@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>yigewangye</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+    <style>
+
+		.outer_dep {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.shell {
+			position: relative;
+			width: 60vw;
+			height: 40vw;
+			max-width: 380px;
+			max-height: 250px;
+			margin: 0;
+			color: white;
+			perspective: 1000px;
+			transform-origin: center;
+		}
+
+		.item {
+			position: absolute;
+			width: 60vw;
+			height: 40vw;
+			max-width: 380px;
+			max-height: 250px;
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
+			border-radius: 5px;
+			background-size: cover;
+			-webkit-box-reflect: below 25px -webkit-linear-gradient(semi-transparent, rgba(255, 255, 255, 0.3));
+		}
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /*
+			transform-origin: center;
+			transform-style: preserve-3d;
+			transform: translateZ(-30vw) rotateY(0);
+			animation: carousel 10s infinite linear forwards;
+			*/
+        }
+
+        .item:nth-child(1) {
+            background-image: url(ren.jpeg);
+            transform: rotateY(0) translateZ(35vw);
+        }
+
+        .item:nth-child(2) {
+            background-image: url(反光天空.jpeg);
+            transform: rotateY(72deg) translateZ(35vw);
+        }
+
+        .item:nth-child(3) {
+            background-image: url(楚晚宁.jpeg);
+            transform: rotateY(144deg) translateZ(35vw);
+        }
+
+        .item:nth-child(4) {
+            background-image: url(ren.jpeg);
+            transform: rotateY(216deg) translateZ(35vw);
+        }
+
+        .item:nth-child(5) {
+            background-image: url(ren.jpeg);
+            transform: rotateY(288deg) translateZ(35vw);
+        }
+
+        @keyframes carousel {
+
+            0%,
+            12.5% {
+                transform: translateZ(-35vw) rotateY(0);
+            }
+
+            17.5%,
+            30% {
+                transform: translateZ(-35vw) rotateY(-72deg);
+            }
+
+            35%,
+            47.5% {
+                transform: translateZ(-35vw) rotateY(-144deg);
+            }
+
+            52.5%,
+            65% {
+                transform: translateZ(-35vw) rotateY(-216deg);
+            }
+
+            70%,
+            82.5% {
+                transform: translateZ(-35vw) rotateY(-288deg);
+            }
+
+            87.5%,
+            100% {
+                transform: translateZ(-35vw) rotateY(-360deg);
+            }
+        }
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var carouselContainer = document.querySelector('.content');
+            var carouselAnimation = null;
+
+            function startCarouselAnimation() {
+                carouselAnimation = carouselContainer.style.animation;
+                carouselContainer.style.animationPlayState = 'running';
+            }
+
+            function stopCarouselAnimation() {
+                carouselContainer.style.animationPlayState = 'paused';
+            }
+
+            carouselContainer.addEventListener('mouseenter', stopCarouselAnimation);
+            carouselContainer.addEventListener('mouseleave', startCarouselAnimation);
+        });
+    </script>
+</head>
+
+<body>
+    hello world
+    <h1 align="center">标题1</h1>
+    <h2>标题2</h2>
+    <p>this is a paragraph</p>
+    <p>and I can change another <br> line by using br</p>
+    <hr color="purple" width="500px" size="10px" align="right">
+    <img src="楚晚宁.jpeg" alt="加载失败的提示eg楚晚宁" width="500px" height="600px" title="鼠标悬停显示的提示">
+    <p>绝对路径</p>
+    <img src="/Users/yuexinqi/Downloads/IMG_3416.JPG" alt="绝对路径" width="300px">
+    <p>相对路径同级</p>
+    <img src="楚晚宁.jpeg" alt="相对路径同级" width="300px">
+    <p>相对路径子级</p>
+    <img src="./img/孙策.jpeg" alt="相对路径子级" width="300px">
+    <img src="img/孙策.jpeg" alt="相对路径子级不加./也可以" width="300px">
+    <p>相对路径父级</p>
+    <img src="../孙策2.jpeg" alt="相对路径父级" width="200px">
+    <p>网络访问路径</p>
+    <img src="https://c-ssl.duitang.com/uploads/blog/202111/30/20211130150748_b554e.jpg" alt="黄铉辰" width="300px">
+    <p>超链接</p>
+    <a href="https://translate.google.com/">google translate</a>
+    <p>超链接图片</p>
+    <a
+        href="https://www.bing.com/images/search?view=detailV2&ccid=%2FCRAF%2FxY&id=2492BE215C02C6B17E985A30798F28000C8C81EB&thid=OIP._CRAF_xYJGtycKhsV93cVAHaHa&mediaurl=https%3A%2F%2Fi.pinimg.com%2F736x%2Ff4%2Fd0%2F6a%2Ff4d06ad7335b813393650a4348d2b24b.jpg&exph=736&expw=735&q=felix&simid=607997503725313894&form=IRPRST&ck=26A808131E9D34FA2F6D21678394B82A&selectedindex=67&ajaxhist=0&ajaxserp=0&vt=0&sim=11">
+        <img src="https://i.pinimg.com/736x/f4/d0/6a/f4d06ad7335b813393650a4348d2b24b.jpg" alt="felix" width="300px">
+    </a>
+    <p>文本标签</p>
+    <i>i斜体</i>
+    <strong>strong加重语气</strong>
+    <em>em着重 有点斜体</em>
+    <b>b粗体</b>
+    <span>span目前没啥</span>
+    <del>del删除</del>
+    <p>可以<em>套娃</em>，比如快点<strong>写作业</strong></p>
+    <p><b>有序列表</b>:有不同的type including A,a,1,i,I 分别是大小写罗马数字，阿拉伯数字，大小类字母</p>
+    <ol type="i">
+        <li>no.1</li>
+        <li>no.2</li>
+        <li>no.3</li>
+    </ol>
+    <p>允许套娃之我爱吃的</p>
+    <ol>
+        <li>水果
+            <ol>
+                <li>pineapple</li>
+                <li>dragon fruit</li>
+                <li>orange</li>
+            </ol>
+        </li>
+        <li>炒菜
+            <ol>
+                <li>麻辣烫</li>
+                <li>麻辣香锅</li>
+                <li>火锅</li>
+                <li>炸鸡</li>
+            </ol>
+
+        </li>
+        <li>甜品
+            <ol>
+                <li>草莓蛋糕</li>
+                <li>巧克力雪糕</li>
+                <li>炒酸奶</li>
+            </ol>
+        </li>
+    </ol>
+    <p>无序列表：有type including disc, circle, square, none 允许套娃</p>
+    <ul type="square">
+        <li>孙策</li>
+        <li>68</li>
+        <li>芙蓉</li>
+    </ul>
+    <p>快捷键ul>li*5 ol>li*2</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <p>表格：快捷键table>tr*3>td*4{单元格内容} 属性：boarder 边框 width height</p>
+
+
+
+    <table border="1" width="500px">
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+    <p>合并单元格 左上保留优先</p>
+    <p>水平合并colspan eg： 6 和 7</p>
+    <p>垂直合并rowspan eg： 15和20</p>
+
+
+    <table border="1" width="600px" height="400px">
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>
+            <td colspan="3">单元格6，7，8</td>
+            <td>单元格9</td>
+            <td>单元格10</td>
+        </tr>
+        <tr>
+            <td>单元格11</td>
+            <td>单元格12</td>
+            <td>单元格13</td>
+            <td>单元格14</td>
+            <td rowspan="2">单元格15 20</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">单元格16,17,21,22</td>
+            <td>单元格18</td>
+            <td>单元格19</td>
+        </tr>
+        <tr>
+            <td>单元格23</td>
+            <td>单元格24</td>
+            <td>单元格25</td>
+        </tr>
+    </table>
+
+
+    <p>表单 采集信息 比如login 格式：《form action="服务器" name="" method="get｜post"》《/form》
+        有表单标签，表单域（输入框），表单按钮（提交）</p>
+    <form>
+        <input type="text">
+        <button>submit</button>
+    </form>
+    <form>
+        username:<input type="text">
+        password:<input type="password">
+        <input type="submit" value="log in">
+    </form>
+
+
+    <p>块元素行内元素（内联元素）块：独占一行可包含块和内联 行：该多大多大横向排列</p>
+    <p>div:容器元素的进化</p>
+
+    <div id="header"></div>
+    <div id="nav"></div>
+    <div id="article">
+        <div id="section"></div>
+    </div>
+    <div id="slider"></div>
+    <div id="footer"></div>
+
+    <header>头部</header>
+    <nav>导航</nav>
+    <article>独立的文章新闻评论等
+        <section>文档中的章节，页眉，页脚</section>
+    </article>
+    <aside>侧边栏</aside>
+    <footer>脚部</footer>
+
+
+    <div class="outer_dep">
+        <div class="shell">
+            <div class="content">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
