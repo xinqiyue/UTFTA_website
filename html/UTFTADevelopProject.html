@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UTFTA</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.logo {
+			width: 180px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			float: left;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #d8e6ef;
+		}
+
+		.headcontainer {
+			width: 80%;
+			margin: 0 auto;
+			padding: 5px;
+			overflow: hidden;
+			clear: both;
+		}
+
+		header {
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			padding: 10px 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1000;
+			transition: background-color 0.3s;
+		}
+
+		header.scrolled {
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+
+		.headnav {
+			margin-left: 260px;
+		}
+
+		.headnav ul {
+			list-style-type: none;
+			margin-top: 10px;
+			padding-top: 10px;
+
+		}
+
+		.headnav ul li {
+			display: inline;
+			margin-right: 20px;
+		}
+
+		.headnav ul li a {
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+			font-size: 1.2em;
+		}
+
+		.headnav ul li a:hover {
+			opacity: 0.7;
+		}
+
+
+		.container {
+			color: #1c3849;
+			font-size: large;
+			width: 80%;
+			margin: 0 auto;
+			padding: 10px;
+			overflow: hidden;
+			clear: both;
+		}
+
+		.section {
+			padding: 50px 0;
+			margin-top: 65px;
+			clear: both;
+		}
+
+		.section h3 {
+			font-size: xx-large;
+		}
+
+		p {
+			padding: 20px;
+			font-family:sans-serif
+		}
+
+
+		footer {
+			background-image: linear-gradient(to bottom, #f0f8ff, rgb(255, 255, 255));
+			color: rgb(0, 0, 0);
+			text-align: center;
+			padding: 10px 0;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.footcontainer {
+			width: 80%;
+			margin: 0 auto;
+			padding: 5px;
+			overflow: hidden;
+			clear: both;
+		}
+
+		footer .contact_info {
+			padding: 10px;
+		}
+
+		footer .contact_info h5 {
+			font-size: 10px;
+			font-weight: 100;
+		}
+
+		footer .contact_info ul {
+			display: inline;
+			list-style: none;
+		}
+
+		footer .contact_info ul li {
+			padding: 10px;
+			display: inline;
+		}
+
+
+		/* 随着页面宽度变化，图片位置也会调整 */
+		@media screen and (max-width: 1060px) and (min-width: 768px) {
+			.logo{
+				display: none;
+			}
+			.headnav{
+				margin: 0px;
+			}
+			.image-container {
+				width: 100%;
+				float: none;
+				/* 适应较窄的屏幕 */
+			}
+
+
+			.image-container img.active {
+				width: 100%;
+			}
+
+			.caption {
+				position: relative;
+				left: 2px;
+				width: auto;
+			}
+
+			.section{
+				padding-top: 20px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.logo{
+				display: none;
+			}
+
+			.image-container {
+				width: auto;
+				float: none;
+				/* 适应较窄的屏幕 */
+			}
+
+			.image-container img.active {
+				width: 100%;
+			}
+
+			.caption {
+				position: relative;
+				left: 2px;
+				width: auto;
+			}
+
+			.headnav{
+				margin: -10px;
+			}
+			.headnav ul li{
+				display: flex;
+			}
+			.section{
+				padding-top: 80px;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="./font/iconfont.css">
+</head>
+
+
+
+<body>
+	<header>
+		<div class="headcontainer">
+			<img class="logo" src="logo.PNG" alt="utfta logo">
+			<nav class="headnav">
+				<ul>
+					<li><a href="UTFTAhome.html">Home</a></li>
+					<li><a href="UTFTAaboutUs.html">About Us</a></li>
+					<li><a href="UTFTACurrentEvents.html">Current Event</a></li>
+					<li><a href="UTFTAJoinUs.html">Join Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<section id="departments" class="section">
+		<div class="container">
+			<h3>Development Project</h3>
+			<p>The Development project will progress through four main categories of fintech: Payments, Lending, Investment Management, and Blockchain. Each category will foster a hands-on learning environment that allows participants to gain a deeper understanding of fintech and discover their interests in this field. This offers students a unique opportunity to bridge the gap between theoretical knowledge and real-world scenarios, enabling students to directly engage with industry challenges and innovations. </p>
+			<p>In the payment category, students will study the development and current state of digital payments, the mechanics of digital payment systems, explore the latest innovations in the payments industry, participate in case studies involving leading payment platforms such as PayPal and GPay, and more. In the lending category, students will explore how to streamline financing options using AI and machine learning algorithms to process and validate identity credentials, predict income expectations, evaluate borrowers' track records, and foresee changes. The investment management category will focus on how fintech companies are reinventing investment management through robo-advisors, blockchain, and distributed ledger technology. Understanding the new ways to record, track, and store financial asset transactions. Finally, in the Blockchain category, students will explore the principles and applications of blockchain technology in fintech, including cryptocurrencies and smart contracts. Case studies of various systems utilize blockchain technology, including Ethereum, Bitcoin, and more.</p>
+			<p>The project is designed to provide a comprehensive learning experience by focusing on practical applications and real-world problem-solving skills. Participants will not only study the theoretical foundations of each fintech category but also apply this knowledge through interactive projects, case studies, and simulations. This immersive approach ensures that students can see the immediate impact of their learning and understand how fintech solutions are developed and implemented in real time. </p>
+			<p>By the end of the program, students will have a thorough understanding of critical areas of FinTech and be fully prepared to contribute to future innovations, address issues and challenges in the industry, and pursue career opportunities in the field. These make them a valuable asset to potential employers and pave the way for future advancements in the FinTech space.</p>
+		</div>
+	</section>
+
+	<footer>
+		<div class="contact_info">
+			<h5>Contact Us</h5>
+			<ul class="contact_detail">
+				<li>
+					<span class="iconfont icon-instagram"></span>
+					INS: @fintech_ut
+				</li>
+				<li>
+					<span class="iconfont icon-xiaohongshu"></span>
+					小红书: 9622758085
+				</li>
+				<li>
+					<span class="iconfont icon-email"></span>
+					E-mail:
+				</li>
+				<li>
+					<span class="iconfont icon-wechat-fill"></span>
+					Wechat:
+				</li>
+			</ul>
+		</div>
+		<div class="footcontainer">
+			<p>&copy; 2024 UTFTA. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

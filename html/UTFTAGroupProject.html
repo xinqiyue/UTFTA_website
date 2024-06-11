@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UTFTA</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.logo {
+			width: 180px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			float: left;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #d8e6ef;
+		}
+
+		.headcontainer {
+			width: 80%;
+			margin: 0 auto;
+			padding: 5px;
+			overflow: hidden;
+			clear: both;
+		}
+
+		header {
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+			padding: 10px 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1000;
+			transition: background-color 0.3s;
+		}
+
+		header.scrolled {
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+
+		.headnav {
+			margin-left: 260px;
+		}
+
+		.headnav ul {
+			list-style-type: none;
+			margin-top: 10px;
+			padding-top: 10px;
+
+		}
+
+		.headnav ul li {
+			display: inline;
+			margin-right: 20px;
+		}
+
+		.headnav ul li a {
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+			font-size: 1.2em;
+		}
+
+		.headnav ul li a:hover {
+			opacity: 0.7;
+		}
+
+
+		p {
+			padding: 20px;
+			font-family:sans-serif
+		}
+
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			padding: 5px;
+			overflow: hidden;
+			clear: both;
+		}
+
+		.section {
+			padding: 50px 0;
+			margin-top: 65px;
+			clear: both;
+		}
+
+		.section h3 {
+			font-size: x-large;
+		}
+
+
+		footer {
+			background-image: linear-gradient(to bottom, #f0f8ff, rgb(255, 255, 255));
+			color: rgb(0, 0, 0);
+			text-align: center;
+			padding: 10px 0;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.footcontainer {
+			width: 80%;
+			margin: 0 auto;
+			padding: 5px;
+			overflow: hidden;
+			clear: both;
+		}
+
+		footer .contact_info {
+			padding: 10px;
+		}
+
+		footer .contact_info h5 {
+			font-size: 10px;
+			font-weight: 100;
+		}
+
+		footer .contact_info ul {
+			display: inline;
+			list-style: none;
+		}
+
+		footer .contact_info ul li {
+			padding: 10px;
+			display: inline;
+		}
+
+
+
+
+		/* 随着页面宽度变化，图片位置也会调整 */
+		@media screen and (max-width: 1060px) and (min-width: 768px) {
+			.logo{
+				display: none;
+			}
+			.headnav{
+				margin: 0px;
+			}
+			.image-container {
+				width: 100%;
+				float: none;
+				/* 适应较窄的屏幕 */
+			}
+
+
+			.image-container img.active {
+				width: 100%;
+			}
+
+			.caption {
+				position: relative;
+				left: 2px;
+				width: auto;
+			}
+
+			.section{
+				padding-top: 20px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.logo{
+				display: none;
+			}
+
+			.image-container {
+				width: auto;
+				float: none;
+				/* 适应较窄的屏幕 */
+			}
+
+			.image-container img.active {
+				width: 100%;
+			}
+
+			.caption {
+				position: relative;
+				left: 2px;
+				width: auto;
+			}
+
+			.headnav{
+				margin: -10px;
+			}
+			.headnav ul li{
+				display: flex;
+			}
+			.section{
+				padding-top: 80px;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="./font/iconfont.css">
+</head>
+
+
+
+<body>
+	<header>
+		<div class="headcontainer">
+			<img class="logo" src="logo.PNG" alt="utfta logo">
+			<nav class="headnav">
+				<ul>
+					<li><a href="UTFTAhome.html">Home</a></li>
+					<li><a href="UTFTAaboutUs.html">About Us</a></li>
+					<li><a href="UTFTACurrentEvents.html">Current Event</a></li>
+					<li><a href="UTFTAJoinUs.html">Join Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<section id="departments" class="section">
+		<div class="container">
+			<h3>Freshman Group Activities</h3>
+			<p>To support first-year students, we will organize a series of activities designed to help them adapt to university life. Firstly, we will organize introductory seminars or lectures that cover the basis of FinTech. These sessions will provide students with a solid foundation by introducing them to the key concepts, application of financial technology such as AI, big data and so on. Through these educational sessions, we believe our freshmen may develop a better understanding of FinTech. We also aim to produce guidance on navigating the FinTech landscape and fostering a sense of community among new students, since we understand that starting a journey in FinTech can be challenging, in order to assist students in this dynamic industry. These sessions will provide insights into different career paths, internship opportunities and available resources and valuable advice for their future development. Moreover, we recognize the importance of networking in the financial world. Therefore, we will provide students with opportunities for networking with senior association members and professionals in the FinTech industry, we aim to expand students’ professional network and gain insights from experienced individuals. The networking events may include panel discussion, coffee chat sessions, industry fairs and so on. By participating in these activities, students may expand their networks in the professional industry, gain insights from experienced experts and potentially gain internship opportunities while supporting the freshmen’s transition into university life and help them explore more opportunities in FinTech.</p>
+			<p>Furthermore, building a strong social network will be crucial for a better university life. In addition to educational and professional based activities mentioned above, we will also host some social events like welcome parties and team-building exercises. These events are designed to help new students form friendships with their peers and develop a sense of belonging within the FinTech community.</p>
+			<p>By providing a comprehensive range of support activities, our aim is to create a great environment that not only helps first-year students adapt to university life but also sets them up for success in the FinTech field.</p>
+		</div>
+	</section>
+
+	<footer>
+		<div class="contact_info">
+			<h5>Contact Us</h5>
+			<ul class="contact_detail">
+				<li>
+					<span class="iconfont icon-instagram"></span>
+					INS: @fintech_ut
+				</li>
+				<li>
+					<span class="iconfont icon-xiaohongshu"></span>
+					小红书: 9622758085
+				</li>
+				<li>
+					<span class="iconfont icon-email"></span>
+					E-mail:
+				</li>
+				<li>
+					<span class="iconfont icon-wechat-fill"></span>
+					Wechat:
+				</li>
+			</ul>
+		</div>
+		<div class="footcontainer">
+			<p>&copy; 2024 UTFTA. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

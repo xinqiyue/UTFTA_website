@@ -18,7 +18,7 @@
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
-			background-color: #cbedf4;
+			background-color: #d8e6ef;
 		}
 
 		.container {
@@ -41,7 +41,7 @@
 		}
 
 		header.scrolled {
-			background-color: rgba(255, 255, 255, 0.9);
+			background-color: rgba(255, 255, 255, 0.7);
 		}
 
 		nav {
@@ -115,34 +115,6 @@
 			color: #000000;
 		}
 
-
-		/* 随着页面宽度变化，图片位置也会调整 */
-		@media (max-width: 1000px) {
-			.logo{
-				display: none;
-			}
-			nav{
-				margin: 0;
-			}
-			.image-container {
-				width: auto;
-				float: none;
-				/* 适应较窄的屏幕 */
-			}
-
-			.image-container img.active {
-				width: 100%;
-			}
-
-			.caption {
-				position: relative;
-				left: -10px;
-				width: auto;
-			}
-		}
-
-
-
 		footer {
 			background-image: linear-gradient(to bottom, #f0f8ff, rgb(255, 255, 255));
 			color: rgb(0, 0, 0);
@@ -170,6 +142,69 @@
 			padding: 10px;
 			display: inline;
 		}
+
+
+		/* 随着页面宽度变化，图片位置也会调整 */
+		@media screen and (max-width: 1060px) and (min-width: 768px) {
+			.logo{
+				display: none;
+			}
+			nav{
+				margin: 0px;
+			}
+			.image-container {
+				width: 100%;
+				float: none;
+				/* 适应较窄的屏幕 */
+			}
+
+
+			.image-container img.active {
+				width: 100%;
+			}
+
+			.caption {
+				position: relative;
+				left: 2px;
+				width: auto;
+			}
+
+			.section{
+				padding-top: 20px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.logo{
+				display: none;
+			}
+
+			.image-container {
+				width: auto;
+				float: none;
+				/* 适应较窄的屏幕 */
+			}
+
+			.image-container img.active {
+				width: 100%;
+			}
+
+			.caption {
+				position: relative;
+				left: 2px;
+				width: auto;
+			}
+
+			nav{
+				margin: -10px;
+			}
+			nav ul li{
+				display: flex;
+			}
+			.section{
+				padding-top: 80px;
+			}
+		}
 	</style>
 	<script>
 		window.addEventListener('scroll', function () {
@@ -182,8 +217,7 @@
 				header.classList.remove('scrolled');
 			}
 		});
-
-
+		
 		document.addEventListener('DOMContentLoaded', function () {
 			var images = document.querySelectorAll('.image-container img');
 			var index = 0;
@@ -217,6 +251,7 @@
 
 
 
+
 	</script>
 	<link rel="stylesheet" href="./font/iconfont.css">
 </head>
@@ -229,10 +264,10 @@
 			<img class="logo" src="logo.PNG" alt="utfta logo">
 			<nav>
 				<ul>
-					<li><a href="UTFTAhome.html">About Us</a></li>
-					<li><a href="utftadepartment.html">Departments</a></li>
-					<li><a href="utftaactivities.html">Past Activities</a></li>
-					<li><a href="utftawhatisgoingon.html">What's Going On</a></li>
+					<li><a href="UTFTAhome.html">Home</a></li>
+					<li><a href="UTFTAaboutUs.html">About Us</a></li>
+					<li><a href="UTFTACurrentEvents.html">Current Event</a></li>
+					<li><a href="UTFTAJoinUs.html">Join Us</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -241,18 +276,40 @@
 	<section id="about" class="section">
 		<div class="container">
 			<h3>About Us</h3>
-			<p>我们是多伦多大学金融科技学生协会(UTFTA)，全称
-				是 university of Toronto fintech student association。<br>
-				在这里我们组织金融科技大佬的经验讲座和交流，
-				为学生提供更多职场或者就业的实用千货。
-				我们还为喜欢金融科技的同学们提供了一个可以展示自我才华和交流的平台。
-				除了金融科技类的社团活动，我们还会组织各种团建，与社团成员们一起聚餐，
-				一起剧本杀，一起玩桌游!</p>
+			<p>Welcome to the University of Toronto Fintech Association (UTFTA), 
+				a vibrant hub where finance intersects with advanced technology.
+				 Established this year, UTFTA is dedicated to exploring the
+				  rapidly developing field of financial technology and its 
+				  potential to revolutionize how we interact with money. We aim
+				   to bridge the gap between traditional finance and innovative 
+				   technology, providing a platform for learning, networking, and 
+				   professional growth.   
+			</p>
+			<p>
+				At the FinTech Association, we believe in the transformative 
+				power of technology to reshape the financial landscape. Our
+				 mission is to cultivate innovative ideas and advance the field 
+				 of finance in the digital age by providing education, hands-on 
+				 experience, and a platform for exchange in fintech. Whether you 
+				 are new to FinTech or a seasoned enthusiast, our association 
+				 offers valuable resources and opportunities to enhance your 
+				 knowledge and skills. 
+			</p>
+			<p>
+				We cover a broad range of FinTech topics, including payments,
+				 lending, investment management, and blockchain technologies. 
+				 As a member of our community, you will have the opportunity to
+				  interact with professionals in the field, take part in practical
+				   projects, and gain insights and abilities that are essential
+				    for a prosperous career in finance. Join us now to be at the
+					 forefront of the financial revolution and shape the future 
+					 of finance and technology.
+			</p>
 		</div>
 	</section>
 
 	<div class="container">
-		<div class="image-container">
+		<div id="images1" class="image-container">
 			<img src="楚晚宁.jpeg" alt="Image 1">
 			<img src="ren.jpeg" alt="Image 3">
 			<img src="utfta_logo.JPG" alt="Image 3">
@@ -260,13 +317,9 @@
 			<img src="ren.jpeg" alt="Image 3">
 		</div>
 		<div class="caption">
-			<p class="text2">我们是多伦多大学金融科技学生协会(UTFTA)，全称
-				是 university of Toronto fintech student association。<br>
-				在这里我们组织金融科技大佬的经验讲座和交流，
-				为学生提供更多职场或者就业的实用千货。
-				我们还为喜欢金融科技的同学们提供了一个可以展示自我才华和交流的平台。
-				除了金融科技类的社团活动，我们还会组织各种团建，与社团成员们一起聚餐，
-				一起剧本杀，一起玩桌游!</p>
+			<p class="text2">We are university of toronto fintech student association. 
+				We are holding fintech related events, dedicated to promote 
+				more possibilities in fintech industry.</p>
 		</div>
 
 	</div>
@@ -277,7 +330,9 @@
 	<section id="departments" class="section">
 		<div class="container">
 			<h3>Departments</h3>
-			<p>Our society comprises various departments like Finance, Technology, Marketing, and Events.</p>
+			<p>Our members are from diverse programs at University 
+				of Toronto, bringing a rich blend of perspectives and expertise to
+				 our club.</p>
 		</div>
 	</section>
 
@@ -285,8 +340,9 @@
 	<section id="activities" class="section">
 		<div class="container">
 			<h3>Past Activities</h3>
-			<p>Explore our previous events and activities.</p>
-			<!-- Add past activity details here -->
+			<p>Discover our club's latest event, practical fintech projects, 
+				featuring engaging speakers, interactive workshops, and opportunities 
+				for networking.</p>
 		</div>
 	</section>
 
@@ -301,7 +357,7 @@
 	<footer>
 		<div class="contact_info">
 			<h5>Contact Us</h5>
-			<ul>
+			<ul class="contact_detail">
 				<li>
 					<span class="iconfont icon-instagram"></span>
 					INS: @fintech_ut
