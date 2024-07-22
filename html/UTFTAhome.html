@@ -80,6 +80,10 @@
 			font-size: x-large;
 		}
 
+		p {
+			font-size: 15px;
+		}
+
 		.image-container {
 			position: relative;
 			justify-content: flex-start;
@@ -108,7 +112,7 @@
 
 		.caption {
 			position: relative;
-			top: -10px;
+			top: 10px;
 			left: 10px;
 			/* 将文字移动到图片的左边，距离为100px */
 			height: auto;
@@ -141,6 +145,29 @@
 		footer .contact_info ul li {
 			padding: 10px;
 			display: inline;
+		}
+
+
+		.learn-more-button {
+    		background-color: #50b4de; /* background */
+    		border: none; /* Remove borders */
+    		color: white; /* White text */
+    		padding: 15px 32px; /* Some padding */
+    		text-align: center; /* Centered text */
+    		text-decoration: none; /* Remove underline */
+    		display: inline-block; /* Make the button inline-block */
+    		font-size: 16px; /* Increase font size */
+    		margin: 4px 2px; /* Add some margin */
+    		cursor: pointer; /* Pointer/hand icon */
+    		border-radius: 8px; /* Rounded corners */
+    		transition-duration: 0.4s; /* 0.4 second transition effect */
+			margin-left: 200px;
+		}
+
+		.learn-more-button:hover {
+    		background-color: white; /* White background */
+    		color: black; /* Black text */
+    		border: 2px solid #6bc1e3; /* Green border */
 		}
 
 
@@ -256,7 +283,9 @@
 	<link rel="stylesheet" href="./font/iconfont.css">
 </head>
 
-
+<section class="section">
+	<div class="container"><h2>Home Page</h2></div>
+</section>
 
 <body>
 	<header>
@@ -267,23 +296,17 @@
 					<li><a href="UTFTAhome.html">Home</a></li>
 					<li><a href="UTFTAaboutUs.html">About Us</a></li>
 					<li><a href="UTFTACurrentEvents.html">Current Event</a></li>
+					<li><a href="UTFTAOurMember.html">Our Member</a></li>
 					<li><a href="UTFTAJoinUs.html">Join Us</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<section id="about" class="section">
-		<div class="container">
-			<h3>About Us</h3>
-			<p>We are university of toronto fintech student association. 
-				We are holding fintech related events, dedicated to promote 
-				more possibilities in fintech industry.
-			</p>
-		</div>
-	</section>
+
 
 	<div class="container">
+		<h2>About Us</h2>
 		<div id="images1" class="image-container">
 			<img src="楚晚宁.jpeg" alt="Image 1">
 			<img src="ren.jpeg" alt="Image 3">
@@ -297,28 +320,27 @@
 				more possibilities in fintech industry.</p>
 		</div>
 
+		<button class="learn-more-button" onclick="window.location.href='UTFTAaboutUs.html'">
+			Learn More
+		</button>
+
 	</div>
 
 
 
 
-	<section id="departments" class="section">
-		<div class="container">
-			<h3>Departments</h3>
-			<p>Our members are from diverse programs at University 
-				of Toronto, bringing a rich blend of perspectives and expertise to
-				 our club.</p>
-		</div>
-	</section>
 
 
 	<section id="activities" class="section">
 		<div class="container">
-			<h3>Past Activities</h3>
+			<h3>Current Activities</h3>
 			<p>Discover our club's latest event, practical fintech projects, 
 				featuring engaging speakers, interactive workshops, and opportunities 
 				for networking.</p>
 		</div>
+		<button class="learn-more-button" onclick="window.location.href='UTFTACurrentEvents.html'">
+			Learn More
+		</button>
 	</section>
 
 	<section id="events" class="section">
@@ -327,7 +349,37 @@
 			<p>Stay updated with our latest events and activities.</p>
 			<!-- Add upcoming events details here -->
 		</div>
+		<button class="learn-more-button" onclick="window.location.href='UTFTACurrentEvents.html'">
+			Learn More
+		</button>
 	</section>
+
+
+
+	<section id="departments" class="section">
+		<div class="container">
+			<h3>Our Member</h3>
+			<p>Our members are from diverse programs at University 
+				of Toronto, bringing a rich blend of perspectives and expertise to
+				 our club.</p>
+		</div>
+		<button class="learn-more-button" onclick="window.location.href='UTFTAOurMember.html'">
+			Learn More
+		</button>
+	</section>
+
+	<section id="departments" class="section">
+		<div class="container">
+			<h3>Join Us</h3>
+			<p>Join us for exciting opportunities, engaging activities, and a supportive community. 
+				Expand your horizons, develop new skills, and be part of fintech at every step.</p>
+		</div>
+		<button class="learn-more-button" onclick="window.location.href='UTFTAOurMember.html'">
+			Learn More
+		</button>
+	</section>
+
+
 
 	<footer>
 		<div class="contact_info">

@@ -22,7 +22,7 @@
 		}
 
 		.container {
-			width: 60%;
+			width: 80%;
 			margin: 0 auto;
 			padding: 5px;
 			overflow: hidden;
@@ -30,7 +30,7 @@
 		}
 
 		header {
-			background-color: rgb(244, 249, 252);
+			background-color: rgb(255, 255, 255);
 			color: rgb(0, 0, 0);
 			padding: 10px 0;
 			position: fixed;
@@ -44,79 +44,42 @@
 			background-color: rgba(255, 255, 255, 0.7);
 		}
 
-		.headernav {
+		nav {
 			margin-left: 260px;
 		}
 
-		.headernav ul {
+		nav ul {
 			list-style-type: none;
 			margin-top: 10px;
 			padding-top: 10px;
 
 		}
 
-		.headernav ul li {
+		nav ul li {
 			display: inline;
 			margin-right: 20px;
 		}
 
-		.headernav ul li a {
+		nav ul li a {
 			color: rgb(0, 0, 0);
 			text-decoration: none;
 			font-size: 1.2em;
 		}
 
-		.headernav ul li a:hover {
+		nav ul li a:hover {
 			opacity: 0.7;
-		}
-
-		.eventcontainer {
-			display: flex;
-			justify-content: center;
-			opacity: 0.7;
-			/* 水平居中 */
-		}
-
-		.eventsummary {
-			background-color: #ffffff;
-			width: 500px;
-			margin-top: 50px;
-			margin-left: 20px;
-			margin-right: 20px;
-			padding: 50px;
-			border-radius: 15px;
-		}
-
-		.more{
-			float: inline-end;
-			list-style-type: none;
-		}
-
-		.more a{
-			font-size: 13px;
-			color: #2d85b4;
-			text-decoration: none;
-		}
-
-		.projname{
-			font-size: large;
-			font-weight: bolder;
-			color: #2f5c71;
-		}
-
-		.projpoints li{
-			font-weight: 530;
-			color: #394a55;
 		}
 
 		.section {
 			padding: 50px 0;
 			margin-top: 65px;
 			clear: both;
+            position: relative;
 		}
 
 		.section h3 {
 			font-size: x-large;
+            text-align: center;
 		}
 
 		.image-container {
@@ -182,17 +145,22 @@
 			display: inline;
 		}
 
+        .photo202324 {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        
+
 
 		/* 随着页面宽度变化，图片位置也会调整 */
 		@media screen and (max-width: 1060px) and (min-width: 768px) {
-			.logo {
+			.logo{
 				display: none;
 			}
-
-			.headernav {
+			nav{
 				margin: 0px;
 			}
-
 			.image-container {
 				width: 100%;
 				float: none;
@@ -210,13 +178,13 @@
 				width: auto;
 			}
 
-			.section {
+			.section{
 				padding-top: 20px;
 			}
 		}
 
 		@media (max-width: 768px) {
-			.logo {
+			.logo{
 				display: none;
 			}
 
@@ -236,15 +204,13 @@
 				width: auto;
 			}
 
-			.headernav {
+			nav{
 				margin: -10px;
 			}
-
-			.headernav ul li {
+			nav ul li{
 				display: flex;
 			}
-
-			.section {
+			.section{
 				padding-top: 80px;
 			}
 		}
@@ -260,7 +226,7 @@
 				header.classList.remove('scrolled');
 			}
 		});
-
+		
 		document.addEventListener('DOMContentLoaded', function () {
 			var images = document.querySelectorAll('.image-container img');
 			var index = 0;
@@ -305,7 +271,7 @@
 	<header>
 		<div class="container">
 			<img class="logo" src="logo.PNG" alt="utfta logo">
-			<nav class="headernav">
+			<nav>
 				<ul>
 					<li><a href="UTFTAhome.html">Home</a></li>
 					<li><a href="UTFTAaboutUs.html">About Us</a></li>
@@ -317,71 +283,18 @@
 		</div>
 	</header>
 
-	<section id="events" class="section">
-		<div class="container">
-			<h3>Current Events</h3>
-		</div>
-		<div class="eventcontainer">
-			<div class="eventsummary">
-				<p class="projname">Development Project:</p>
-				<p>(Payments, Lending, Investment Management, Blockchain)</p>
-				<nav>
-					<ul class="projpoints">
-						<li>allows members to apply theoretical knowledge in real-world scenarios</li>
-						<li>fosters a hands-on learning environment</li>
-						<li>cultivate interest in fintech</li>
-						<li class="more"><a href="UTFTADevelopProject.html">learn more</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-		<div class="eventcontainer">
-			<div class="eventsummary">
-				<p class="projname">Investment Program:</p>
-				<nav>
-					<ul class="projpoints">
-						<li>focus on FinTech investment strategies</li>
-						<li>explore valuation models and leverage big data to predict long-term stock prices</li>
-						<li class="more"><a href="UTFTAInvestProject.html">learn more</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-		<div class="eventcontainer">
-			<div class="eventsummary">
-				<p class="projname">Freshman Group Activities:</p>
-				<nav>
-					<ul class="projpoints">
-						<li>cover the basics of FinTech</li>
-						<li>offer guidance on navigating the FinTech landscape</li>
-						<li>provide opportunities for networking with senior association members and professionals</li>
-						<li class="more"><a href="UTFTAGroupProject.html">learn more</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</section>
-
-
-	<div class="container">
-		<div id="images1" class="image-container">
-			<img src="楚晚宁.jpeg" alt="Image 1">
-			<img src="ren.jpeg" alt="Image 3">
-			<img src="utfta_logo.JPG" alt="Image 3">
-			<img src="反光天空.jpeg" alt="Image 2">
-			<img src="ren.jpeg" alt="Image 3">
-		</div>
-		<div class="caption">
-			<p class="text2">We are university of toronto fintech student association.
-				We are holding fintech related events, dedicated to promote
-				more possibilities in fintech industry.</p>
-		</div>
-
-	</div>
-
-
+    <div class="section">
+        <h3>2023-2024 Academic Year Members</h3>
+        <div class="photo202324">
+            <img src="member_2023-2024/Member_2023_2024_co_president.jpg" alt="CoPresident_2023_2024" width="500px" height="500px" title="co_president">
+            <img src="member_2023-2024/Member_2023-2024_marketing1.jpg" alt="Marketing_2023_2024" width="500px" height="500px" title="Marketing">
+            <img src="member_2023-2024/Member_2023-2024_marketing2.jpg" alt="Marketing_2023_2024" width="500px" height="500px" title="Marketing">
+            <img src="member_2023-2024/Member_2023_2024_finance.jpg" alt="Finance_2023_2024" width="500px" height="500px" title="Finance">
+            <img src="member_2023-2024/Member_2023_2024_event.jpg" alt="Event_2023_2024" width="500px" height="500px" title="Event">
+            <img src="member_2023-2024/Member_2023_2024_public_relationship.jpg" alt="Public_Relationship_2023_2024" width="500px" height="500px" title="Public_Relationship">
+            <img src="member_2023-2024/Member_2023_2024_development.jpg" alt="Development_2023_2024" width="500px" height="500px" title="Development">
+        </div>
+    </div>
 
 	<footer>
 		<div class="contact_info">
@@ -409,8 +322,6 @@
 			<p>&copy; 2024 UTFTA. All rights reserved.</p>
 		</div>
 	</footer>
-
-	<script src="script.js"></script>
 </body>
 
 </html>
